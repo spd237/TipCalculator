@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="./images/logo.svg" alt="logo" class="logo" />
+
+    <div class="container">
+      <div class="limiter">
+        <div class="inputs">
+          <div class="bill-amnt">
+            <h3>Bill</h3>
+            <input type="number" id="bill" class="input-field-style" />
+          </div>
+          <div class="tip-amnt">
+            <h3>Select Tip %</h3>
+            <div class="tip-buttons">
+              <button class="tip-btn" data-percentage="0.05">5%</button>
+              <button class="tip-btn" data-percentage="0.1">10%</button>
+              <button class="tip-btn" data-percentage="0.15">15%</button>
+              <button class="tip-btn" data-percentage="0.25">25%</button>
+              <button class="tip-btn" data-percentage="0.5">50%</button>
+              <input type="number" id="custom-tip" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="people">
+            <h3>
+              Number of People <span class="error-msg">Can't be zero</span>
+            </h3>
+            <input type="number" id="nrPeople" class="input-field-style" />
+          </div>
+        </div>
+
+        <div class="amounts">
+          <div class="tip-amount flex">
+            <div>
+              <p class="display-style">Tip amount</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <div>
+              <span class="tip-value">$0.00</span>
+            </div>
+          </div>
+          <div class="total-amount flex">
+            <div>
+              <p class="display-style">Total</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <div>
+              <span class="total-value">$0.00</span>
+            </div>
+          </div>
+          <button class="reset-btn">RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
